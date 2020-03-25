@@ -32,36 +32,38 @@ public class MainActivity extends AppCompatActivity {
     private Gson gson;
 
     @Override
-    protected Void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //showList();
 
-        sharedPreferences = getSharedPreferences("Projet Pokemon", Context.MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences(Constant.SHARED_POKE, Context.MODE_PRIVATE);
         gson = new GsonBuilder()
                 .setLenient()
                 .create();
 
         List<Pokemon> pokemonList = getDataFromCache();
-        if (pokemonList!=null)
+        if (pokemonList != null){
             showList(pokemonList);
-            else{
-
+             } else {
             makeApiCall();
-
         }
+    }
+
 
     private List<Pokemon> getDataFromCache() {
-            String JsonPokemon = sharedPreferences.getString("jsonPokemonList", null);
-            Type listType = new TypeToken<List<Pokemon>>() {
-            }.getType();
-            return gson.fromJson(JsonPokemon, listType);
+        String jsonPokemon = sharedPreferences.getString(Constant.KEY_POKEMON, null);
+
+        if(jsonPokemon == null){
+            return null;
+        }
+        else {
+            Type listType = new TypeToken<List<Pokemon>>() {}.getType();
+            return gson.fromJson(jsonPokemon, listType);
         }
 
     }
 
-    private List<Pokemon> getDataFromCache() {
-    }
 
     private void showList(List<Pokemon> pokemonList){
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -106,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         String JsonString = gson.toJson(pokemonList);
         sharedPreferences
                 .edit()
-                .putString("jsonPokemonList", "JsonString")
+                .putString(Constant.KEY_POKEMON, "JsonString")
                 .apply();
         Toast.makeText(getApplicationContext(), "List xSaved", Toast.LENGTH_SHORT).show();
     }
