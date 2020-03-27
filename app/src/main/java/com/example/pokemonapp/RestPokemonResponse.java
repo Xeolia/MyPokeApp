@@ -3,11 +3,11 @@ package com.example.pokemonapp;
 import java.util.List;
 
 public class RestPokemonResponse {
-    private int count;
+    private Integer count;
     private String next;
     private List<Pokemon> results;
 
-    public int getCount() {
+    public Integer getCount() {
         return count;
     }
 
@@ -19,3 +19,4 @@ public class RestPokemonResponse {
         return results;
     }
 }
+
