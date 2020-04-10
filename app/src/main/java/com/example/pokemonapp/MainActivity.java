@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-    private static final String BASE_URL = "https://pokeapi.co/";
+    private static final String BASE_URL ="https://ghibliapi.herokuapp.com";
+    //private static final String BASE_URL = "https://pokeapi.co/";
     private SharedPreferences sharedPreferences;
     private Gson gson;
 
@@ -123,4 +124,5 @@ public class MainActivity extends AppCompatActivity {
     private void showError() {
         Toast.makeText(getApplicationContext(),"API Error",Toast.LENGTH_LONG).show();
     }
+
 }

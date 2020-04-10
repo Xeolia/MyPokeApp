@@ -1,5 +1,6 @@
 package com.example.pokemonapp;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -65,8 +66,20 @@ import java.util.List;
             // - get element from your dataset at this position
             // - replace the contents of the view with that element
             final Pokemon currentPokemon = values.get(position);
-            holder.txtHeader.setText(currentPokemon.getName());
-            holder.txtFooter.setText("Footer: " + currentPokemon.getUrl());
+            //holder.txtHeader.setText(currentPokemon.getName());
+            holder.txtHeader.setText(currentPokemon.getTitle());
+            //holder.txtFooter.setText("Footer: " + currentPokemon.getUrl());
+            holder.txtFooter.setText("Description: " + currentPokemon.getDescription());
+
+            holder.txtHeader.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    remove(position);
+                    //finish();
+
+                }
+            });
         }
 
         // Return the size of your dataset (invoked by the layout manager)
