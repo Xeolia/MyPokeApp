@@ -73,7 +73,7 @@ import java.util.List;
                 @Override
                 public void onClick(View v) {
                     Context Mycontext = v.getContext();
-                    Intent intent = new Intent(Mycontext,ThirdFragment.class);
+                    Intent intent = new Intent(Mycontext,.class);
                     Mycontext.startActivity(intent);
                 }
             });
