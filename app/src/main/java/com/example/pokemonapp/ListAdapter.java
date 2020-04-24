@@ -1,5 +1,7 @@
 package com.example.pokemonapp;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -67,6 +69,14 @@ import java.util.List;
             final Pokemon currentPokemon = values.get(position);
             holder.txtHeader.setText(currentPokemon.getName());
             holder.txtFooter.setText("Footer: " + currentPokemon.getUrl());
+            holder.txtHeader.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Context Mycontext = v.getContext();
+                    Intent intent = new Intent(Mycontext,ThirdFragment.class);
+                    Mycontext.startActivity(intent);
+                }
+            });
         }
 
         // Return the size of your dataset (invoked by the layout manager)
