@@ -3,4 +3,5 @@
     <string name="description" />
     <string name="example_application" />
     <string name="todo" />
+    <string name="retour">Retour</string>
 </resources>
