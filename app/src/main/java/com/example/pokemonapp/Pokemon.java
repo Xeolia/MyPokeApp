@@ -1,21 +1,21 @@
 package com.example.pokemonapp;
 
 public class Pokemon {
-   /* private String url;
+    private String url;
     private String name;
-
+    int id;
+    private String title;
+    private String description;
+    private String director;
+    private String producer;
 
     public String getName() {
         return name;
     }
     public String getUrl() {
         return url;
-    }*/
-   int id;
-   String title;
-   String description;
-   String director;
-   String producer;
+    }
+
 
     public int getId() {
         return id;
@@ -36,4 +36,6 @@ public class Pokemon {
     public String getProducer() {
         return producer;
     }
+
+
 }

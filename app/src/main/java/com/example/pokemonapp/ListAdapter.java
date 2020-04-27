@@ -1,5 +1,6 @@
 package com.example.pokemonapp;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-    public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
+import retrofit2.http.HEAD;
+
+public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         private List<Pokemon> values;
 
         // Provide a reference to the views for each data item
@@ -66,17 +69,18 @@ import java.util.List;
             // - get element from your dataset at this position
             // - replace the contents of the view with that element
             final Pokemon currentPokemon = values.get(position);
-            //holder.txtHeader.setText(currentPokemon.getName());
-            holder.txtHeader.setText(currentPokemon.getTitle());
-            //holder.txtFooter.setText("Footer: " + currentPokemon.getUrl());
-            holder.txtFooter.setText("Description: " + currentPokemon.getDescription());
 
-            holder.txtHeader.setOnClickListener(new OnClickListener() {
+            holder.txtHeader.setText(currentPokemon.getName());
+            holder.txtFooter.setText("Footer: " + currentPokemon.getUrl());
+            holder.itemView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Context Mycontext = v.getContext();
+                    Intent intent = new Intent(Mycontext,MySecondFragment.class);
+                    Mycontext.startActivity(intent);
+                    intent.putExtra("TotalCase",currentPokemon.getName());
+                    intent.putExtra("NewCase",currentPokemon.getUrl());
 
-                    remove(position);
-                    //finish();
 
                 }
             });
