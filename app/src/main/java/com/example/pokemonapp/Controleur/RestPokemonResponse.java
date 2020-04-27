@@ -1,4 +1,4 @@
-package com.example.pokemonapp;
+package com.example.pokemonapp.Controleur;
 
 import java.util.List;
 

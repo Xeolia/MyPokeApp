@@ -1,4 +1,4 @@
-package com.example.pokemonapp;
+package com.example.pokemonapp.Controleur;
 
 public class Pokemon {
     private String url;

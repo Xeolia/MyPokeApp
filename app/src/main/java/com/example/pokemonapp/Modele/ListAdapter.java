@@ -1,4 +1,4 @@
-package com.example.pokemonapp;
+package com.example.pokemonapp.Modele;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,9 +10,11 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.List;
+import com.example.pokemonapp.Controleur.Pokemon;
+import com.example.pokemonapp.R;
+import com.example.pokemonapp.Vue.MySecondFragment;
 
-import retrofit2.http.HEAD;
+import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         private List<Pokemon> values;
@@ -76,7 +78,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                 @Override
                 public void onClick(View v) {
                     Context Mycontext = v.getContext();
-                    Intent intent = new Intent(Mycontext,MySecondFragment.class);
+                    Intent intent = new Intent(Mycontext, MySecondFragment.class);
                     Mycontext.startActivity(intent);
                     intent.putExtra("TotalCase",currentPokemon.getName());
                     intent.putExtra("NewCase",currentPokemon.getUrl());

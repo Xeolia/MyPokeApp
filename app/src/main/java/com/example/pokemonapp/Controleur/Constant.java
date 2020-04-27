@@ -1,4 +1,4 @@
-package com.example.pokemonapp;
+package com.example.pokemonapp.Controleur;
 
 public class Constant {
     static String KEY_POKEMON = "jsonPokemonList";

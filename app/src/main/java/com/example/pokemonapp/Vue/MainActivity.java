@@ -1,4 +1,4 @@
-package com.example.pokemonapp;
+package com.example.pokemonapp.Vue;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,16 +9,16 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.example.pokemonapp.PokeApi;
-import com.example.pokemonapp.Pokemon;
+import com.example.pokemonapp.Modele.ListAdapter;
+import com.example.pokemonapp.Controleur.Pokemon;
 import com.example.pokemonapp.R;
-import com.example.pokemonapp.RestPokemonResponse;
+import com.example.pokemonapp.Controleur.PokeApi;
+import com.example.pokemonapp.Controleur.RestPokemonResponse;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
