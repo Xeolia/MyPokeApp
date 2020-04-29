@@ -19,6 +19,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -33,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private ListAdapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
     private static final String BASE_URL ="https://ghibliapi.herokuapp.com";
-    //private static final String BASE_URL = "https://pokeapi.co/";
     private SharedPreferences sharedPreferences;
     private Gson gson;
 
@@ -90,21 +90,22 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         PokeApi pokeApi = retrofit.create(PokeApi.class);
-        Call<RestPokemonResponse> call = pokeApi.getPokemonResponse();
-        call.enqueue(new Callback<RestPokemonResponse>() {
+        Call<ArrayList<Pokemon>> call = pokeApi.getPokemonResponse();
+        call.enqueue(new Callback<ArrayList<Pokemon>>(){
             @Override
-            public void onResponse(Call<RestPokemonResponse> call, Response<RestPokemonResponse> response)
+            public void onResponse(Call<ArrayList<Pokemon>> call, Response<ArrayList<Pokemon>> response)
             {
                 if (response.isSuccessful() && response.body() != null) {
-                    List<Pokemon> pokemonList = response.body().getResults();
+                    ArrayList<Pokemon> pokemonList = response.body();
                     saveList(pokemonList);
-                    showList(pokemonList);
+                        showList(pokemonList);
+                    Toast.makeText(getApplicationContext(),"API Success",Toast.LENGTH_LONG).show();
                 } else {
                     showError();
                 }
             }
             @Override
-            public void onFailure(Call<RestPokemonResponse> call, Throwable t) {
+            public void onFailure(Call<ArrayList<Pokemon>> call, Throwable t) {
                 showError();
             }
         });

@@ -14,10 +14,11 @@ import com.example.pokemonapp.Controleur.Pokemon;
 import com.example.pokemonapp.R;
 import com.example.pokemonapp.Vue.MySecondFragment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-        private List<Pokemon> values;
+        private List<Pokemon> values ;
 
         // Provide a reference to the views for each data item
         // Complex data items may need more than one view per item, and
@@ -72,16 +73,16 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             // - replace the contents of the view with that element
             final Pokemon currentPokemon = values.get(position);
 
-            holder.txtHeader.setText(currentPokemon.getName());
-            holder.txtFooter.setText("Footer: " + currentPokemon.getUrl());
+            holder.txtHeader.setText(currentPokemon.getTitle());
+            holder.txtFooter.setText("Footer: " + currentPokemon.getDescription());
             holder.itemView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Context Mycontext = v.getContext();
                     Intent intent = new Intent(Mycontext, MySecondFragment.class);
                     Mycontext.startActivity(intent);
-                    intent.putExtra("TotalCase",currentPokemon.getName());
-                    intent.putExtra("NewCase",currentPokemon.getUrl());
+                    intent.putExtra("TotalCase",currentPokemon.getId());
+                    intent.putExtra("NewCase",currentPokemon.getDirector());
 
 
                 }

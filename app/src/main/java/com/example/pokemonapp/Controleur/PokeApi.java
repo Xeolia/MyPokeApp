@@ -1,14 +1,12 @@
 package com.example.pokemonapp.Controleur;
 
+import java.util.ArrayList;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 
 public interface PokeApi {
-   // @GET("/api/v2/pokemon")
     @GET("/films")
-    Call<RestPokemonResponse> getPokemonResponse();
+    Call<ArrayList<Pokemon>> getPokemonResponse();
 
-
-   // @GET("/api/v2/ability")
-    //Call<RestPokemonResponse> getAbility();
 }
