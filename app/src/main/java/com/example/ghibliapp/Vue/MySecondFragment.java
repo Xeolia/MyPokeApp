@@ -1,4 +1,4 @@
-package com.example.pokemonapp.Vue;
+package com.example.ghibliapp.Vue;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.pokemonapp.R;
+import com.example.ghibliapp.R;
 
 public class MySecondFragment extends AppCompatActivity  {
 

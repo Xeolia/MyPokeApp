@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PokemonApp</string>
+    <string name="app_name">GhibliApp</string>
     <string name="description" />
     <string name="example_application" />
     <string name="todo" />

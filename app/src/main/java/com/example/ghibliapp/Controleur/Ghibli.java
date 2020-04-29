@@ -1,6 +1,6 @@
-package com.example.pokemonapp.Controleur;
+package com.example.ghibliapp.Controleur;
 
-public class Pokemon {
+public class Ghibli {
     private String id;
     private String title;
     private String description;

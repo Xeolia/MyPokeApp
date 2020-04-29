@@ -1,4 +1,4 @@
-package com.example.pokemonapp;
+package com.example.ghibliapp;
 
 import org.junit.Test;
 

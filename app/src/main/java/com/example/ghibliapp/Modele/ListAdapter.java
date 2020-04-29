@@ -1,4 +1,4 @@
-package com.example.pokemonapp.Modele;
+package com.example.ghibliapp.Modele;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,15 +10,14 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.pokemonapp.Controleur.Pokemon;
-import com.example.pokemonapp.R;
-import com.example.pokemonapp.Vue.MySecondFragment;
+import com.example.ghibliapp.Vue.MySecondFragment;
+import com.example.ghibliapp.Controleur.Ghibli;
+import com.example.ghibliapp.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
-        private List<Pokemon> values ;
+        private List<Ghibli> values ;
 
         // Provide a reference to the views for each data item
         // Complex data items may need more than one view per item, and
@@ -37,7 +36,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             }
         }
 
-        public void add(int position, Pokemon item) {
+        public void add(int position, Ghibli item) {
             values.add(position, item);
             notifyItemInserted(position);
         }
@@ -48,7 +47,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         }
 
         // Provide a suitable constructor (depends on the kind of dataset)
-        public ListAdapter(List<Pokemon> myDataset) {
+        public ListAdapter(List<Ghibli> myDataset) {
             values = myDataset;
         }
 
@@ -71,7 +70,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         public void onBindViewHolder(ViewHolder holder, final int position) {
             // - get element from your dataset at this position
             // - replace the contents of the view with that element
-            final Pokemon currentPokemon = values.get(position);
+            final Ghibli currentPokemon = values.get(position);
 
             holder.txtHeader.setText(currentPokemon.getTitle());
             holder.txtFooter.setText("Footer: " + currentPokemon.getDescription());
