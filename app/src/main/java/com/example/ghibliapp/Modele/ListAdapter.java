@@ -70,19 +70,19 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         public void onBindViewHolder(ViewHolder holder, final int position) {
             // - get element from your dataset at this position
             // - replace the contents of the view with that element
-            final Ghibli currentPokemon = values.get(position);
+            final Ghibli currentGhibli = values.get(position);
 
-            holder.txtHeader.setText(currentPokemon.getTitle());
-            holder.txtFooter.setText("Footer: " + currentPokemon.getDescription());
+            holder.txtHeader.setText(currentGhibli.getTitle());
+            holder.txtFooter.setText(currentGhibli.getDescription());
             holder.itemView.setOnClickListener(new OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Context Mycontext = v.getContext();
                     Intent intent = new Intent(Mycontext, MySecondFragment.class);
+                    intent.putExtra("FilmDirector",currentGhibli.getDirector());
+                    intent.putExtra("Description",currentGhibli.getDescription());
+                    intent.putExtra("Date",currentGhibli.getRelease_date());
                     Mycontext.startActivity(intent);
-                    intent.putExtra("TotalCase",currentPokemon.getId());
-                    intent.putExtra("NewCase",currentPokemon.getDirector());
-
 
                 }
             });
