@@ -21,7 +21,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/monImage"
         android:layout_width="173dp"
         android:layout_height="141dp"
         android:layout_marginStart="122dp"
@@ -47,7 +47,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonRetour"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/monImage" />
 
     <TextView
         android:id="@+id/monRealisateur"
@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/maDecription" />
 
     <TextView
-        android:id="@+id/maDate"
+            android:id="@+id/maDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="179dp"
@@ -76,6 +76,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/monRealisateur" />
+
+    <TextView
+        android:id="@+id/monTitre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginEnd="173dp"
+        android:layout_marginRight="173dp"
+        android:text="@string/Titre"
+        app:layout_constraintBottom_toTopOf="@+id/maDecription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monImage" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

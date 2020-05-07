@@ -79,9 +79,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                 public void onClick(View v) {
                     Context Mycontext = v.getContext();
                     Intent intent = new Intent(Mycontext, MySecondFragment.class);
+                    intent.putExtra("Titre",currentGhibli.getTitle());
                     intent.putExtra("FilmDirector",currentGhibli.getDirector());
                     intent.putExtra("Description",currentGhibli.getDescription());
                     intent.putExtra("Date",currentGhibli.getRelease_date());
+
                     Mycontext.startActivity(intent);
 
                 }
