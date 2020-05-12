@@ -1,4 +1,4 @@
-package com.example.ghibliapp.Controleur;
+package com.example.ghibliapp.presentation.Modele;
 
 public class Ghibli {
     private String id;
@@ -8,7 +8,7 @@ public class Ghibli {
     private String producer;
     private String release_date;
     private String rt_score;
-
+    //private People people;
 
     public String getId() {
         return id;

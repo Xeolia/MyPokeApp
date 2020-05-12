@@ -1,10 +1,7 @@
-package com.example.ghibliapp.Vue;
+package com.example.ghibliapp;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -12,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ghibliapp.R;
+import com.example.ghibliapp.presentation.Vue.MainActivity;
 
 public class MySecondFragment extends AppCompatActivity {
     String valueDescription = "Hello world";

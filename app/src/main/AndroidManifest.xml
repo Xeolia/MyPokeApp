@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:targetApi="n">
-        <activity android:name="com.example.ghibliapp.Vue.MainActivity">
+        <activity android:name="com.example.ghibliapp.presentation.Vue.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.ghibliapp.Vue.MySecondFragment">
+        <activity android:name="com.example.ghibliapp.MySecondFragment">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
