@@ -10,7 +10,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.ghibliapp.MySecondFragment;
 import com.example.ghibliapp.R;
 import com.example.ghibliapp.presentation.Modele.Ghibli;
 

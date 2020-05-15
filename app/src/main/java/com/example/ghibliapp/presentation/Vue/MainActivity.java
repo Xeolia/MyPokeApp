@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.ghibliapp.R;
+import com.example.ghibliapp.Singletons;
 import com.example.ghibliapp.presentation.Modele.Ghibli;
 import com.example.ghibliapp.presentation.controlleur.MainControleur;
 import com.google.gson.Gson;
@@ -32,10 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         controleur = new MainControleur(
                 this,
-                new GsonBuilder()
-                        .setLenient()
-                        .create(),
-                getSharedPreferences("Ghibli Application", Context.MODE_PRIVATE)
+                Singletons.getGson(),
+                Singletons.getSharedPreferences(getApplicationContext())
         );
         controleur.onStart();
 

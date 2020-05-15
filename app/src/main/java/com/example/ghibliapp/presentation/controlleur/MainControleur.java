@@ -1,14 +1,11 @@
 package com.example.ghibliapp.presentation.controlleur;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.ghibliapp.Constant;
-import com.example.ghibliapp.data.GhibliApi;
+import com.example.ghibliapp.Singletons;
 import com.example.ghibliapp.presentation.Modele.Ghibli;
 import com.example.ghibliapp.presentation.Vue.MainActivity;
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
@@ -18,8 +15,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainControleur {
     private SharedPreferences sharedPreferences;
@@ -27,7 +22,7 @@ public class MainControleur {
     private MainActivity view;
 
     public MainControleur(MainActivity view, Gson gson, SharedPreferences sharedPreferences) {
-        this.view =view;
+        this.view = view;
         this.gson = gson;
         this.sharedPreferences = sharedPreferences;
     }
@@ -45,13 +40,8 @@ public class MainControleur {
 
     private void makeApiCall() {
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Constant.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
 
-        GhibliApi ghibliApi = retrofit.create(GhibliApi.class);
-        Call<ArrayList<Ghibli>> call = ghibliApi.getGhibliResponse();
+        Call<ArrayList<Ghibli>> call = Singletons.getGhibliApi().getGhibliResponse();
         call.enqueue(new Callback<ArrayList<Ghibli>>() {
             @Override
             public void onResponse(Call<ArrayList<Ghibli>> call, Response<ArrayList<Ghibli>> response) {
