@@ -1,11 +1,11 @@
-package com.example.pokemonapp;
+package com.example.ghibliapp.presentation.Modele;
 
 import java.util.List;
 
-public class RestPokemonResponse {
+public class RestGhibliResponse {
     private Integer count;
     private String next;
-    private List<Pokemon> results;
+    private List<Ghibli> results;
 
     public Integer getCount() {
         return count;
@@ -15,7 +15,7 @@ public class RestPokemonResponse {
         return next;
     }
 
-    public List<Pokemon> getResults() {
+    public List<Ghibli> getResults() {
         return results;
     }
 }
