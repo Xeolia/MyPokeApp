@@ -1,4 +1,4 @@
-package com.example.ghibliapp.presentation.controlleur;
+package com.example.ghibliapp.presentation.controleur;
 
 import android.content.SharedPreferences;
 

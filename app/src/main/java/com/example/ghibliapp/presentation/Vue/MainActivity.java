@@ -1,7 +1,5 @@
 package com.example.ghibliapp.presentation.Vue;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -12,9 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ghibliapp.R;
 import com.example.ghibliapp.Singletons;
 import com.example.ghibliapp.presentation.Modele.Ghibli;
-import com.example.ghibliapp.presentation.controlleur.MainControleur;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.example.ghibliapp.presentation.controleur.MainControleur;
 
 import java.util.List;
 
@@ -34,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         controleur = new MainControleur(
                 this,
                 Singletons.getGson(),
-                Singletons.getSharedPreferences(getApplicationContext())
+                Singletons.getSharedPreferences(getApplicationContext() )
         );
         controleur.onStart();
 
@@ -48,9 +44,11 @@ public class MainActivity extends AppCompatActivity {
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
+        
         // define an adapter
         mAdapter = new ListAdapter(ghibliList);
         recyclerView.setAdapter(mAdapter);
+
     }
 
     public void showError() {
