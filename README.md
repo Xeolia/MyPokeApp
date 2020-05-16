@@ -9,26 +9,9 @@ Application Android présentant les la collection de films d'animation Ghibli av
 Ce dont vous avez besoin pour installer le logiciel et comment l'installer
 
 ```
-Un téléphone android
+Un téléphone android ou VM Android
 ```
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Application
 Ecran d'acceuil
@@ -53,17 +36,13 @@ Add additional notes about how to deploy this on a live system
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+For the versions available, see the [v1.0](https://github.com/Xeolia/MyPokeApp/releases/tag/v1.0). 
 
 ## Authors
 
-* **Alexia SERRIER** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Alexia SERRIER** - *Initial work* - [Xeolia](https://github.com/Xeolia)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
