@@ -30,25 +30,16 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
+## Application
+Ecran d'acceuil
 
-Explain how to run the automated tests for this system
+![Acceuil](https://user-images.githubusercontent.com/56538671/82113805-10ebe500-9759-11ea-83f5-52c49a7fd8f8.PNG)
 
-### Break down into end to end tests
+Ecran des détails sur le film selectionné
 
-Explain what these tests test and why
+![Detail](https://user-images.githubusercontent.com/56538671/82113810-16e1c600-9759-11ea-9c66-308bc8bb3847.PNG)
 
-```
-Give an example
-```
 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Deployment
 
@@ -66,7 +57,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Alexia ** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Alexia SERRIER** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
