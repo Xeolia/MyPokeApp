@@ -16,7 +16,7 @@ Un téléphone android ou VM Android
 ## Application
 Ecran d'acceuil
 
-![Acceuil](https://user-images.githubusercontent.com/56538671/82113805-10ebe500-9759-11ea-83f5-52c49a7fd8f8.PNG)
+![Acceuil](https://user-images.githubusercontent.com/56538671/82142188-d2c6f200-983a-11ea-8730-63806c53cc3b.PNG)
 
 Ecran des détails sur le film selectionné
 
