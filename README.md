@@ -20,7 +20,7 @@ Application Android présentant les la collection de films d'animation Ghibli av
 
 ## Application
 #### Ecran d'acceuil
-* Affiche la liste des pokémons 
+* Affiche la liste des films 
 
 ![Acceuil](https://user-images.githubusercontent.com/56538671/82142188-d2c6f200-983a-11ea-8730-63806c53cc3b.PNG)
 
