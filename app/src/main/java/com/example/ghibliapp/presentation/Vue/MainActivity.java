@@ -1,6 +1,7 @@
 package com.example.ghibliapp.presentation.Vue;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         );
         controleur.onStart();
 
+
     }
 
 
@@ -44,7 +46,12 @@ public class MainActivity extends AppCompatActivity {
         // use a linear layout manager
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
-        
+        recyclerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
         // define an adapter
         mAdapter = new ListAdapter(ghibliList);
         recyclerView.setAdapter(mAdapter);
