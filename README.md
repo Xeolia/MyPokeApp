@@ -4,48 +4,47 @@
 Application Android présentant les la collection de films d'animation Ghibli avec leurs description.
 
 
-### Prerequisites
+##### Prérequis
+* Installation d'Android Studio
+* Récupérer la branche master
 
-Ce dont vous avez besoin pour installer le logiciel et comment l'installer
+## Consignes respectées 
 
-```
-Un téléphone android ou VM Android
-```
-
+* Clean Architecture & MVC
+* Appels REST
+* Ecrans : 3 activités, 3 fragments(Ecran chargement, acceuil & détail)
+* Affichage d'une liste dans un RecyclerView
+* Affichage du détail d'un item de la liste
+* Gitflow 
+* Données en cache
 
 ## Application
-Ecran d'acceuil
+#### Ecran d'acceuil
+* Affiche la liste des pokémons 
 
 ![Acceuil](https://user-images.githubusercontent.com/56538671/82142188-d2c6f200-983a-11ea-8730-63806c53cc3b.PNG)
 
-Ecran des détails sur le film selectionné
+#### Ecran des détails sur le film selectionné
+* Affiche les différentes informations sur le film sélectionné
+* Titre, description, directeur, date de sortie.. 
+* le retour vers le menu d'acceuil est cliquable
+
 
 ![Detail](https://user-images.githubusercontent.com/56538671/82113810-16e1c600-9759-11ea-9c66-308bc8bb3847.PNG)
 
 
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
+## Outils utilisés
 
 * [Android Studio](https://developer.android.com/studio/) -
 * [API Ghibli](https://ghibliapi.herokuapp.com/) - l'API utilisée
 
 
-## Versioning
+## Version
 
-For the versions available, see the [v1.0](https://github.com/Xeolia/MyPokeApp/releases/tag/v1.0). 
+Première version de l'application
+[v1.0](https://github.com/Xeolia/MyPokeApp/releases/tag/v1.0). 
 
-## Authors
+## Auteur
 
 * **Alexia SERRIER** - *Initial work* - [Xeolia](https://github.com/Xeolia)
-
-
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
