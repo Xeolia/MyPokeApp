@@ -4,4 +4,11 @@
     <string name="example_application" />
     <string name="todo" />
     <string name="retour">Retour</string>
+    <string name="maDescription">maDecription</string>
+    <string name="monrealisateur">monRealisateur</string>
+    <string name="textview">TextView</string>
+    <string name="madate">maDate</string>
+    <string name="Titre">TextView</string>
+    <string name="imageCh">TODO</string>
+    <string name="loading" />
 </resources>

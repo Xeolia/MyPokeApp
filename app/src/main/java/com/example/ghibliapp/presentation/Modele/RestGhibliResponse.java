@@ -1,4 +1,4 @@
-package com.example.ghibliapp.Controleur;
+package com.example.ghibliapp.presentation.Modele;
 
 import java.util.List;
 
