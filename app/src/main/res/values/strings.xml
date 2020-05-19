@@ -10,4 +10,5 @@
     <string name="madate">maDate</string>
     <string name="Titre">TextView</string>
     <string name="imageCh">TODO</string>
+    <string name="loading" />
 </resources>

@@ -33,12 +33,18 @@ public class CustomProgressBarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_progressbar);
         ImageView monGif = (ImageView) findViewById(R.id.imageView);
+        ImageView monSecondGif = (ImageView) findViewById(R.id.imageView2);
         Glide GlideApp;
         String url = "https://66.media.tumblr.com/tumblr_lpsdjmuPoX1qf94kbo1_500.gifv";
 
         Glide.with(getApplicationContext())
                 .load(url)
                 .into(monGif);
+        loadImageByInternetUrl();
+        String secondeUrl = "https://media1.tenor.com/images/a388b52cb0b98b71066ce08b9fcc21c5/tenor.gif";
+        Glide.with(getApplicationContext())
+                .load(secondeUrl)
+                .into(monSecondGif);
         loadImageByInternetUrl();
 
         loading = new Thread(new Runnable() {
