@@ -12,13 +12,20 @@ Application Android présentant les la collection de films d'animation Ghibli av
 
 * Clean Architecture & MVC
 * Appels REST
-* Ecrans : 3 activités, 3 fragments(Ecran chargement, acceuil & détail)
+* Ecrans : 3 activités, 3 fragments
 * Affichage d'une liste dans un RecyclerView
 * Affichage du détail d'un item de la liste
 * Gitflow 
+* Utilisation de Thread
 * Données en cache
 
 ## Application
+#### Ecran de chargement
+
+* Premier écran affichant Totoro
+
+![Chargement](https://user-images.githubusercontent.com/56538671/82337102-ad2d1a80-99eb-11ea-99a1-c79a80101839.PNG)
+
 #### Ecran d'acceuil
 * Affiche la liste des films 
 
