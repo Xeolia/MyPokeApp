@@ -52,7 +52,6 @@ Application Android présentant les la collection de films d'animation Ghibli av
 Première version de l'application
 [v1.0](https://github.com/Xeolia/MyPokeApp/releases/tag/v1.0). 
 
-
 Seconde version de l'application
 [v1.0.2](https://github.com/Xeolia/MyPokeApp/releases/tag/v1.0.2).
 
